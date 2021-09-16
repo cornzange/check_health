@@ -5,7 +5,7 @@ fail_count=1
 
 while true
 do
-  response=$(curl --write-out %{http_code}:8080 --silent --output /dev/null $1)
+  response=$(curl --local-port 8080 --write-out %{http_code} --silent --output /dev/null $1)
 
   if [ $response -eq 200 ] ; then
     echo "$(date -u) Server available"
