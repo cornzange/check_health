@@ -12,7 +12,7 @@ do
     # wait for loadbalancer to register
 
     echo "$(date -u) Waiting for Droplet to register with LB"
-    sleep 60
+    sleep 120
 
     exit 0
   else
